@@ -248,19 +248,11 @@
 <p>3&#xFF09;&#x6DFB;&#x52A0;&#x591A;&#x884C;&#x8BB0;&#x5F55;&#xFF08;row&#xFF0C;record&#xFF0C;&#x6BCF;&#x884C;&#x5B58;&#x653E;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#xFF09;</p>
 <p>8.&#x6570;&#x636E;&#x5E93;&#x7684;&#x4F7F;&#x7528;</p>
 <ol>
-<li>&#x6253;&#x5F00;&#x6570;&#x636E;&#x5E93;</li>
+<li><p>&#x6253;&#x5F00;&#x6570;&#x636E;&#x5E93;</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)openDB</span><br><span class="line">{</span><br><span class="line"><span class="comment">/**</span><br><span class="line">*  &#x6253;&#x5F00;&#x6570;&#x636E;&#x5E93;</span><br><span class="line">*</span><br><span class="line">*  @param filename#&gt; &#x8DEF;&#x5F84;(&#x6587;&#x4EF6;&#x540D;&#x7528;C&#x8BED;&#x8A00;&#x7684;&#x683C;&#x5F0F;&#x5199;.UTF8Stirng) description#&gt;</span><br><span class="line">*  @param ppDb#&gt;     &#x6570;&#x636E;&#x5E93;&#x7684;&#x5730;&#x5740; description#&gt;</span><br><span class="line">*</span><br><span class="line">*  @return BOOL</span><br><span class="line">*/</span></span><br><span class="line"><span class="built_in">BOOL</span> result = sqlite3_open(<span class="keyword">self</span>.dataBasePath.UTF8String, &amp;db);</span><br><span class="line"><span class="keyword">if</span> (result == SQLITE_OK) {</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@&quot;&#x6253;&#x5F00;&#x6210;&#x529F;&quot;</span>);</span><br><span class="line">}<span class="keyword">else</span></span><br><span class="line"></span><br><span class="line">{</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@&quot;&#x6253;&#x5F00;&#x5931;&#x8D25;&quot;</span>);</span><br><span class="line">}</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>2.&#x5173;&#x95ED;&#x6570;&#x636E;&#x5E93;</p>
+</li>
 </ol>
-<ul>
-<li>(void)openDB<br>{<br>/**</li>
-</ul>
-<ul>
-<li>&#x6253;&#x5F00;&#x6570;&#x636E;&#x5E93;<br>*</li>
-<li>@param filename#&gt; &#x8DEF;&#x5F84;(&#x6587;&#x4EF6;&#x540D;&#x7528;C&#x8BED;&#x8A00;&#x7684;&#x683C;&#x5F0F;&#x5199;.UTF8Stirng) description#&gt;</li>
-<li>@param ppDb#&gt;     &#x6570;&#x636E;&#x5E93;&#x7684;&#x5730;&#x5740; description#&gt;<br>*</li>
-<li>@return BOOL<br>*/<br>BOOL result = sqlite3_open(self.dataBasePath.UTF8String, &amp;db);<br>if (result == SQLITE_OK) {<br>NSLog(@&#x201D;&#x6253;&#x5F00;&#x6210;&#x529F;&#x201D;);<br>}else</li>
-</ul>
-<p>{<br>NSLog(@&#x201D;&#x6253;&#x5F00;&#x5931;&#x8D25;&#x201D;);<br>}<br>}</p>
-<p> 2.&#x5173;&#x95ED;&#x6570;&#x636E;&#x5E93;</p>
 <ul>
 <li><p>(void)closeDB<br>{<br>BOOL result = sqlite3_close(db);<br>if (result == SQLITE_OK) {<br>NSLog(@&#x201D;&#x5173;&#x95ED;&#x6210;&#x529F;&#x201D;);<br>}else{<br>NSLog(@&#x201D;&#x5173;&#x95ED;&#x5931;&#x8D25;&#x201D;);<br>}<br>}</p>
 <p>3.&#x521B;&#x5EFA;&#x8868;</p>
