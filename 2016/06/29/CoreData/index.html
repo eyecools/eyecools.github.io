@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2016 | MokChen的博客</title>
+  <title>CoreData | MokChen的博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -215,55 +215,131 @@
 
         <!-- ============================ END Hero Image =========================== -->
       
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/06/29/CoreData/">CoreData</a></h4>
-                            
-                            <p><time datetime="2016-06-29T11:04:51.000Z"><a href="/2016/06/29/CoreData/">2016-06-29</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/06/28/SQLite/">SQLite</a></h4>
-                            
-                            <p><time datetime="2016-06-28T12:03:07.000Z"><a href="/2016/06/28/SQLite/">2016-06-28</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/05/13/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2016-05-13T12:35:37.000Z"><a href="/2016/05/13/hello-world/">2016-05-13</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-06-29T11:04:51.000Z" itemprop="datePublished">
+          2016-06-29
+      </time>
+    
+</span>
+                <h1>CoreData</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h4 id="CoreData&#x6982;&#x5FF5;&#xFF1A;"><a href="#CoreData&#x6982;&#x5FF5;&#xFF1A;" class="headerlink" title="CoreData&#x6982;&#x5FF5;&#xFF1A;"></a>CoreData&#x6982;&#x5FF5;&#xFF1A;</h4><h6 id="CoreData&#x4F18;&#x70B9;&#xFF1A;"><a href="#CoreData&#x4F18;&#x70B9;&#xFF1A;" class="headerlink" title="CoreData&#x4F18;&#x70B9;&#xFF1A;"></a>CoreData&#x4F18;&#x70B9;&#xFF1A;</h6><p>(1).&#x53EF;&#x89C6;&#x5316;&#x3001;&#x4E0D;&#x7528;&#x518D;&#x5199;SQL&#x8BED;&#x53E5;&#xFF0C;&#x5927;&#x91CF;&#x7B80;&#x5316;&#x4EE3;&#x7801;&#x3002;<br>(2).&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x591A;&#x79CD;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#xFF1A;NSSQLiteStoreType&#xFF0C;NSXMLStoreType&#x7B49;&#x3002;<br>(3).&#x4E0E;iOS&#x7D27;&#x5BC6;&#x7ED3;&#x5408;&#xFF0C;&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x5F00;&#x53D1;iOS&#x3002;<br>(4).&#x5B58;&#x50A8;&#x5185;&#x5BB9;&#xFF0C;&#x4EE5;&#x5BF9;&#x8C61;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;&#xFF0C;&#x7B26;&#x5408;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x601D;&#x60F3;&#x3002;</p>
+<h5 id="SQLite"><a href="#SQLite" class="headerlink" title="SQLite"></a>SQLite</h5><p>(1).&#x662F;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x6570;&#x636E;&#x5E93;&#x800C;&#x4E14;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#x7684;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x88AB;&#x5D4C;&#x5165;&#x5230;&#x5E94;&#x7528;&#x5F53;&#x4E2D;&#xFF0C;&#x53EF;&#x79FB;&#x690D;&#x6027;&#x9AD8;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x591A;&#x4E2A;&#x5E73;&#x53F0;&#x4F7F;&#x7528;&#x3002;<br>(2).&#x548C;CoreData&#x6846;&#x67B6;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x662F;&#xFF0C;sqlite&#x662F;&#x4F7F;&#x7528;&#x7A0B;&#x5E8F;&#x5F0F;&#x7684;&#xFF0C;sql&#x7684;&#x4E3B;&#x8981;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;&#xFF0C;&#x662F;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x8868;&#x3002;<br>(3).&#x57FA;&#x4E8E;C&#x63A5;&#x53E3;&#xFF0C;&#x4F7F;&#x7528;sql&#x8BED;&#x53E5;&#x3001;&#x4EE3;&#x7801;&#x7E41;&#x7410;&#x3002;<br>(4).&#x5728;&#x5904;&#x7406;&#x5927;&#x91CF;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x8868;&#x5173;&#x7CFB;&#x66F4;&#x76F4;&#x89C2;&#x4E00;&#x4E9B;&#x3002;<br>(5).OC&#x4E2D;&#x4E0D;&#x662F;&#x53EF;&#x89C6;&#x5316;&#x7684;</p>
+<h4 id="2-&#x589E;&#x52A0;"><a href="#2-&#x589E;&#x52A0;" class="headerlink" title="2.&#x589E;&#x52A0;"></a>2.&#x589E;&#x52A0;</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-(void)add{</span><br><span class="line"></span><br><span class="line">    //&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x7ED9;&#x5B9E;&#x4F53;&#x8FDB;&#x884C;alloc init&#x521D;&#x59CB;&#x5316;</span><br><span class="line">    People *people = [NSEntityDescription insertNewObjectForEntityForName:@<span class="string">&quot;People&quot;</span> <span class="keyword">in</span>ManagedObjectContext:_app.managedObjectContext];</span><br><span class="line">    people.name = @<span class="string">&quot;&#x82B1;&#x82B1;&quot;</span>;</span><br><span class="line">    people.age = @<span class="string">&quot;16&quot;</span>;</span><br><span class="line">    people.gender = @<span class="string">&quot;&#x5973;&quot;</span>;</span><br><span class="line">    </span><br><span class="line">    [_app.managedObjectContext save:nil];</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h4 id="3-&#x5220;&#x9664;"><a href="#3-&#x5220;&#x9664;" class="headerlink" title="3.&#x5220;&#x9664;"></a>3.&#x5220;&#x9664;</h4><pre><code class="bash">-(void)delete{
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+    //1&#x3001;&#x8BFB;&#x53D6;&#x8FD9;&#x4E2A;&#x7C7B;
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@<span class="string">&quot;People&quot;</span> <span class="keyword">in</span>ManagedObjectContext:_app.managedObjectContext];
+
+    //2&#x3001;&#x5EFA;&#x7ACB;&#x8BF7;&#x6C42;
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+
+    //&#x5EFA;&#x7ACB;&#x8BF7;&#x6C42;&#x7684;&#x662F;&#x54EA;&#x4E2A;&#x5B9E;&#x4F53;&#xFF08;&#x7ED9;People&#x8FD9;&#x4E2A;&#x5B9E;&#x4F53;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#xFF09;
+    [request <span class="built_in">set</span>Entity:entity];
+
+    //&#x8BBE;&#x7F6E;&#x5220;&#x9664;&#x6761;&#x4EF6;
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@<span class="string">&quot;age = %@&quot;</span>,@<span class="string">&quot;16&quot;</span>];
+
+    //&#x8BF7;&#x6C42;&#x6267;&#x884C;&#x5220;&#x9664;&#x6761;&#x4EF6;
+    [request <span class="built_in">set</span>Predicate:predicate];
+
+    NSArray *array = [_app.managedObjectContext executeFetchRequest:request error:nil];
+
+    <span class="keyword">if</span> (array.count) {
+        <span class="keyword">for</span> (People *people <span class="keyword">in</span> array) {
+            //&#x5F00;&#x59CB;&#x5220;&#x9664;&#x5BF9;&#x8C61;
+            [_app.managedObjectContext deleteObject:people];
+        }
+        [_app.managedObjectContext save:nil];;
+    }
+}
+</code></pre>
+<h4 id="4-&#x67E5;&#x8BE2;"><a href="#4-&#x67E5;&#x8BE2;" class="headerlink" title="4.&#x67E5;&#x8BE2;"></a>4.&#x67E5;&#x8BE2;</h4><pre><code class="bash">-(void)select{
+
+    //&#x8BFB;&#x53D6;&#x8FD9;&#x4E2A;&#x7C7B;
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@<span class="string">&quot;People&quot;</span> <span class="keyword">in</span>ManagedObjectContext:_app.managedObjectContext];
+
+    //&#x5EFA;&#x7ACB;&#x8BF7;&#x6C42;
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+
+    //&#x54EA;&#x4E2A;&#x7C7B;&#x5EFA;&#x7ACB;&#x7684;&#x8BF7;&#x6C42;
+    [request <span class="built_in">set</span>Entity:entity];
+
+    //&#x904D;&#x5386;&#x6240;&#x6709;people&#xFF0C;&#x83B7;&#x53D6;people&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x8FD4;&#x56DE;&#x5230;&#x6570;&#x7EC4;&#x4E2D;
+    NSArray *array = [_app.managedObjectContext executeFetchRequest:request error:nil];
+
+    <span class="keyword">for</span> (People *people <span class="keyword">in</span> array) {
+        NSLog(@<span class="string">&quot;name = %@&quot;</span>,people.name);
+        NSLog(@<span class="string">&quot;age = %@&quot;</span>,people.age);
+        NSLog(@<span class="string">&quot;gender = %@&quot;</span>,people.gender);
+    }
+}
+</code></pre>
+<h4 id="5-&#x66F4;&#x6539;"><a href="#5-&#x66F4;&#x6539;" class="headerlink" title="5.&#x66F4;&#x6539;"></a>5.&#x66F4;&#x6539;</h4><pre><code class="bash">-(void)updata{
+
+    //&#x521D;&#x59CB;&#x5316;&#x7C7B;
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@<span class="string">&quot;People&quot;</span> <span class="keyword">in</span>ManagedObjectContext:_app.managedObjectContext];
+    //&#x5EFA;&#x7ACB;&#x8BF7;&#x6C42;
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    //&#x54EA;&#x4E2A;&#x7C7B;&#x5EFA;&#x7ACB;&#x7684;&#x8BF7;&#x6C42;
+    [request <span class="built_in">set</span>Entity:entity];
+
+    //&#x8BBE;&#x7F6E;&#x66F4;&#x65B0;&#x6761;&#x4EF6;
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@<span class="string">&quot;name = %@&quot;</span>,@<span class="string">&quot;&#x82B1;&#x82B1;&quot;</span>];
+
+    [request <span class="built_in">set</span>Predicate:predicate];
+
+    NSArray *array = [_app.managedObjectContext executeFetchRequest:request error:nil];
+
+    <span class="keyword">if</span> (array.count) {
+        <span class="keyword">for</span> (People *people <span class="keyword">in</span> array) {
+            //&#x6267;&#x884C;&#x4FEE;&#x6539;
+            people.name = @<span class="string">&quot;&#x5C0F;&#x767D;&quot;</span>;
+        }
+        [_app.managedObjectContext save:nil];
+        NSLog(@<span class="string">&quot;&#x4FEE;&#x6539;&#x6210;&#x529F;&quot;</span>);
+    }<span class="keyword">else</span>{
+        NSLog(@<span class="string">&quot;&#x4FEE;&#x6539;&#x5931;&#x8D25;&quot;</span>);
+    }
+}
+</code></pre>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/06/28/SQLite/">
+        SQLite →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/06/29/CoreData/" data-title="CoreData" data-url="http://yoursite.com/2016/06/29/CoreData/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
