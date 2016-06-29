@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>on the way | MokChen的博客</title>
+  <title>MokChen的博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -220,38 +220,109 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-06-28T08:14:57.000Z" itemprop="datePublished">
+      <time datetime="2016-06-28T12:03:07.000Z" itemprop="datePublished">
           2016-06-28
       </time>
     
 </span>
-                <h1>on the way</h1>
+                <h1></h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p><img src="/2016/06/28/on-the-way/back.png" alt="logo"></p>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3>
+      		<hr>
+<p>title: SQLite<br>date: 2016-06-28 20:03:07<br>tags:</p>
+<h2 id="SQLite&#x7B80;&#x5355;&#x4ECB;&#x7ECD;"><a href="#SQLite&#x7B80;&#x5355;&#x4ECB;&#x7ECD;" class="headerlink" title="SQLite&#x7B80;&#x5355;&#x4ECB;&#x7ECD;"></a>SQLite&#x7B80;&#x5355;&#x4ECB;&#x7ECD;</h2><h3 id="1-ios&#x4E2D;&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;"><a href="#1-ios&#x4E2D;&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;" class="headerlink" title="1.ios&#x4E2D;&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;"></a>1.ios&#x4E2D;&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;</h3><p>&#xFF08;1&#xFF09;Plist&#xFF08;NSArray\NSDictionary&#xFF09;</p>
+<p>&#xFF08;2&#xFF09;Preference&#xFF08;&#x504F;&#x597D;&#x8BBE;&#x7F6E;\NSUserDefaults&#xFF09;</p>
+<p>&#xFF08;3&#xFF09;NSCoding&#xFF08;NSKeyedArchiver\NSkeyedUnarchiver&#xFF09;</p>
+<p>&#xFF08;4&#xFF09;SQLite3</p>
+<p>&#xFF08;5&#xFF09;Core Data<br>&#x8BF4;&#x660E;&#xFF1A;<br>3&#x662F;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x662F;SQLite&#x7684;&#x7B2C;&#x4E09;&#x4E2A;&#x7248;&#x672C;&#x3002;core Data&#x662F;&#x5BF9;SQLite&#x7684;&#x5C01;&#x88C5;&#xFF0C;&#x56E0;&#x4E3A;iOS&#x4E2D;&#x4F7F;&#x7528;&#x7684;SQLite&#x662F;&#x7EAF;C&#x8BED;&#x8A00;&#x7684;&#x3002;</p>
+<p>2.SQLite<br>&#xFF08;1&#xFF09;&#x4EC0;&#x4E48;&#x662F;SQLite&#xFF1F;</p>
+<p>&#x7B54;&#xFF1A;SQLite&#x662F;&#x4E00;&#x6B3E;&#x8F7B;&#x578B;&#x7684;&#x5D4C;&#x5165;&#x5F0F;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5B89;&#x5353;&#x548C;ios&#x5F00;&#x53D1;&#x4F7F;&#x7528;&#x7684;&#x90FD;&#x662F;SQLite&#x6570;&#x636E;&#x5E93;</p>
+<p>&#xFF08;2&#xFF09;&#x7279;&#x70B9;&#xFF08;&#x4F18;&#x70B9;&#xFF09;</p>
+<p>&#x7B54;&#xFF1A;1&#xFF09;&#x5B83;&#x5360;&#x7528;&#x8D44;&#x6E90;&#x975E;&#x5E38;&#x7684;&#x4F4E;&#xFF0C;&#x5728;&#x5D4C;&#x5165;&#x5F0F;&#x8BBE;&#x5907;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x53EA;&#x9700;&#x8981;&#x51E0;&#x767E;K&#x7684;&#x5185;&#x5B58;&#x5C31;&#x591F;&#x4E86;<br>&#x3000; 2&#xFF09;&#x5B83;&#x7684;&#x5904;&#x7406;&#x901F;&#x5EA6;&#x6BD4;Mysql&#x3001;PostgreSQL&#x8FD9;&#x4E24;&#x6B3E;&#x8457;&#x540D;&#x7684;&#x6570;&#x636E;&#x5E93;&#x90FD;&#x8FD8;&#x5FEB;</p>
+<p> 3.&#x4EC0;&#x4E48;&#x662F;&#x6570;&#x636E;&#x5E93;<br>&#x7B54;&#xFF1A;&#x6570;&#x636E;&#x5E93;&#xFF08;Database&#xFF09;&#x662F;&#x6309;&#x7167;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x6765;&#x7EC4;&#x7EC7;&#x3001;&#x5B58;&#x50A8;&#x548C;&#x7BA1;&#x7406;&#x6570;&#x636E;&#x7684;&#x4ED3;&#x5E93;</p>
+<p>4.&#x6570;&#x636E;&#x5E93;&#x7684;&#x5206;&#x7C7B;<br>   &#x7B54;&#xFF1A;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;2&#x5927;&#x79CD;&#x7C7B;&#xFF0C;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#xFF08;&#x4E3B;&#x6D41;&#xFF09;&#x548C;&#x5BF9;&#x8C61;&#x578B;&#x6570;&#x636E;&#x5E93;&#xFF08;&#x76F4;&#x63A5;&#x628A;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x585E;&#x5165;&#x5230;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5BF9;&#x6BD4;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x800C;&#x8A00;&#x6027;&#x80FD;&#x4E0D;&#x80FD;&#x5F88;&#x597D;&#xFF0C;&#x6548;&#x7387;&#x4E0D;&#x9AD8;&#xFF09;</p>
+<p> 5.&#x5E38;&#x7528;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;<br>&#x7B54;&#xFF1A;PC&#x7AEF;&#xFF1A;Oracle&#x3001;MySQL&#x3001;SQL Server&#x3001;Access&#x3001;DB2&#x3001;Sybase<br>&#x5D4C;&#x5165;&#x5F0F;\&#x79FB;&#x52A8;&#x5BA2;&#x6237;&#x7AEF;&#xFF1A;SQLite</p>
+<p> 6.&#x6570;&#x636E;&#x5E93;&#x662F;&#x5982;&#x4F55;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#xFF1F;<br>&#x7B54;&#xFF1A;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5B58;&#x50A8;&#x7ED3;&#x6784;&#x548C;excel&#x5F88;&#x50CF;&#xFF0C;&#x4EE5;&#x8868;&#xFF08;table&#xFF09;&#x4E3A;&#x5355;&#x4F4D; &#x3002;&#x8868;&#x7531;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#xFF08;&#x5217;&#x3001;&#x5C5E;&#x6027;&#x3001;column&#xFF09;&#x7EC4;&#x6210;&#xFF0C;&#x8868;&#x91CC;&#x9762;&#x7684;&#x6BCF;&#x4E00;&#x884C;&#x6570;&#x636E;&#x79F0;&#x4E3A;&#x8BB0;&#x5F55;</p>
+<p>7.&#x6570;&#x636E;&#x5E93;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#x6B65;&#x9AA4;?</p>
+<p>1&#xFF09;&#x65B0;&#x5EFA;&#x4E00;&#x5F20;&#x8868;&#xFF08;table&#xFF09;</p>
+<p>2&#xFF09;&#x6DFB;&#x52A0;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#xFF08;column&#xFF0C;&#x5217;&#xFF0C;&#x5C5E;&#x6027;&#xFF09;</p>
+<p>3&#xFF09;&#x6DFB;&#x52A0;&#x591A;&#x884C;&#x8BB0;&#x5F55;&#xFF08;row&#xFF0C;record&#xFF0C;&#x6BCF;&#x884C;&#x5B58;&#x653E;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#xFF09;</p>
+<p>8.&#x6570;&#x636E;&#x5E93;&#x7684;&#x4F7F;&#x7528;</p>
+<ol>
+<li>&#x6253;&#x5F00;&#x6570;&#x636E;&#x5E93;</li>
+</ol>
+<ul>
+<li>(void)openDB<br>{<br>/**</li>
+</ul>
+<ul>
+<li>&#x6253;&#x5F00;&#x6570;&#x636E;&#x5E93;<br>*</li>
+<li>@param filename#&gt; &#x8DEF;&#x5F84;(&#x6587;&#x4EF6;&#x540D;&#x7528;C&#x8BED;&#x8A00;&#x7684;&#x683C;&#x5F0F;&#x5199;.UTF8Stirng) description#&gt;</li>
+<li>@param ppDb#&gt;     &#x6570;&#x636E;&#x5E93;&#x7684;&#x5730;&#x5740; description#&gt;<br>*</li>
+<li>@return BOOL<br>*/<br>BOOL result = sqlite3_open(self.dataBasePath.UTF8String, &amp;db);<br>if (result == SQLITE_OK) {<br>NSLog(@&#x201D;&#x6253;&#x5F00;&#x6210;&#x529F;&#x201D;);<br>}else</li>
+</ul>
+<p>{<br>NSLog(@&#x201D;&#x6253;&#x5F00;&#x5931;&#x8D25;&#x201D;);<br>}<br>}</p>
+<p> 2.&#x5173;&#x95ED;&#x6570;&#x636E;&#x5E93;</p>
+<ul>
+<li><p>(void)closeDB<br>{<br>BOOL result = sqlite3_close(db);<br>if (result == SQLITE_OK) {<br>NSLog(@&#x201D;&#x5173;&#x95ED;&#x6210;&#x529F;&#x201D;);<br>}else{<br>NSLog(@&#x201D;&#x5173;&#x95ED;&#x5931;&#x8D25;&#x201D;);<br>}<br>}</p>
+<p>3.&#x521B;&#x5EFA;&#x8868;</p>
+</li>
+</ul>
+<ul>
+<li>(void)creatTable<br>{<br>NSString <em>sqlStr = @&#x201D;create table if not exists  stu(s_id integer primary key autoincrement not null,s_name text ,s_age integer);&#x201D;;<br>//&#x6267;&#x884C;<br>/*</em></li>
+</ul>
+<ul>
+<li>&#x521B;&#x5EFA;&#x8868;&#x6267;&#x884C;&#x8BED;&#x53E5;<br>*</li>
+<li>@param #&gt;       &#x6570;&#x636E;&#x5E93; description#&gt;</li>
+<li>@param sql#&gt;    &#x8BED;&#x53E5; description#&gt;</li>
+<li>@param callback &#x7ED3;&#x679C;&#x56DE;&#x8C03;&#x4E00;&#x4E2A;&#x51FD;&#x6570;<br>*</li>
+<li>@return &#x9519;&#x8BEF;&#x4FE1;&#x606F;<br>*/<br>int result = sqlite3_exec(db, sqlStr.UTF8String, NULL, NULL, NULL);<br>if (result == SQLITE_OK) {<br>NSLog(@&#x201D;&#x521B;&#x5EFA;&#x8868;&#x6210;&#x529F;%@&#x201D;,self.dataBasePath);</li>
+</ul>
+<p>}else<br>{<br>NSLog(@&#x201D;&#x521B;&#x5EFA;&#x8868;&#x5931;&#x8D25;&#x201D;);<br>}</p>
+<p>}</p>
+<p>4.&#x589E;&#x52A0;</p>
+<ul>
+<li>(void)insertWithName:(NSString <em>)name andAge:(NSInteger)age<br>{<br>NSString </em>sqlString  = @&#x201D;insert into stu(s_name,s_age)values(?,?);&#x201D;;</li>
+</ul>
+<p>//2 &#x521B;&#x5EFA;&#x4F34;&#x968F;&#x6307;&#x9488;&#xFF08;&#x7528;&#x4E8E;&#x7ED1;&#x5B9A;&#x53C2;&#x6570;&#xFF0C;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF09;<br>sqlite3_stmt *stmt = NULL;</p>
+<p>/<em><br>sqlite3_prepare<br>( sqlite3 </em>db, &#x6570;&#x636E;&#x5E93;<br>&lt;#const char <em>zSql#&gt;, sql&#x8BED;&#x53E5;&#x8F6C;&#x683C;&#x5F0F;&#x2013;utf8&#x8F6C;&#x683C;&#x5F0F;<br>&lt;#int nByte#&gt;,&#x6B63;&#xFF1A;&#x4EE3;&#x8868;&#x53EA;&#x5F80;&#x540E;&#x8BFB;&#x4E00;&#x4E2A;&#x5B57;&#x8282; &#x8D1F;&#xFF1A;&#x9047;&#x5230;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#x624D;&#x4F1A;&#x7ED3;&#x675F; \000,u000 s_name = @&#x201D;zhang\000san&#x201D;;<br>&lt;#sqlite3_stmt <em>*ppStmt#&gt;,&#x4F34;&#x968F;&#x6307;&#x9488;&#x7684;&#x5730;&#x5740;<br>&lt;#const char </em></em>pzTail#&gt;)&#x8868;&#x793A;&#x53D6;&#x503C;&#x65F6;&#x53D6;&#x4E0D;&#x5168;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x503C;&#x5168;&#x90E8;&#x5B58;&#x4E8E;&#x6B64;&#xFF0C;&#x4E00;&#x822C;&#x7ED9;NULL</p>
+<p>*/</p>
+<p>//3 &#x6B32;&#x6267;&#x884C;<br>int result = sqlite3_prepare(db, sqlString.UTF8String, &amp;stmt, NULL, NULL);<br>if (result == SQLITE_OK) {</p>
+<p>/<em><br>sqlite3_bind_text<br>(&lt;#sqlite3_stmt </em>#&gt;, &#x3010;&#x4F34;&#x968F;&#x6307;&#x9488;&#x2013;&#x7ED1;&#x5B9A;&#x53C2;&#x6570;&#xFF0C;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x3011;<br>&lt;#int#&gt;,&#x3010;&#x201C;&#xFF1F;&#x201D;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4ECE;1&#x5F00;&#x59CB;&#x3011;<br>&lt;#const char <em>#&gt;,&#x3010;&#x8868;&#x793A;&#x4F60;&#x8981;&#x63D2;&#x5165;&#x7684;&#x503C;&#xFF08;&#x8F6C;&#x683C;&#x5F0F;utf-8String&#xFF09;&#x3011;<br>&lt;#int#&gt;,&#x6B63;&#xFF1A;&#x4EE3;&#x8868;&#x53EA;&#x5F80;&#x540E;&#x8BFB;&#x4E00;&#x4E2A;&#x5B57;&#x8282; &#x8D1F;&#xFF1A;&#x9047;&#x5230;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#x624D;&#x4F1A;&#x7ED3;&#x675F; \000,u000 s_name =         @&#x201D;zhang\000san&#x201D;;<br>&lt;#void (</em>)(void <em>)#&gt;)&#x3010;&#x56DE;&#x8C03;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x3011;
+</em>/</p>
+<p>//4 &#x7ED1;&#x5B9A;&#x53C2;&#x6570;&#xFF1A;<br>sqlite3_bind_text(stmt, 1, name.UTF8String, -1, NULL);<br>sqlite3_bind_int64(stmt, 2, age);</p>
+<p>//5 sql&#x8BED;&#x53E5;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x6267;&#x884C;&#x4F34;&#x968F;&#x6307;&#x9488;&#xFF0C;&#x6839;&#x636E;&#x4F34;&#x968F;&#x6307;&#x9488;&#x7684;&#x60C5;&#x51B5;&#x5224;&#x65AD;&#x662F;&#x5426;&#x6267;&#x884C;&#x6210;&#x529F;&#xFF0C;&#x3010;sqlite_done&#x8868;&#x793A;&#x4F34;&#x968F;&#x6307;&#x9488;&#x6267;&#x884C;&#x6210;&#x529F;&#x3011;</p>
+<p>if(sqlite3_step(stmt) == SQLITE_DONE){<br>NSLog(@&#x201D;&#x63D2;&#x5165;&#x6210;&#x529F;&#x201D;);<br>}<br>else{<br>NSLog(@&#x201D;&#x63D2;&#x5165;&#x5931;&#x8D25;&#x201D;);<br>}<br>}<br>else{<br>NSLog(@&#x201D;&#x8BED;&#x53E5;&#x9519;&#x8BEF;&#x201D;);<br> }<br>   sqlite3_finalize(stmt);<br>};</p>
+<p>5.&#x5220;&#x9664;</p>
+<ul>
+<li>(void)deleteStudentByID:(NSInteger )SID<br>{<br>//&#x51C6;&#x5907;sql&#x8BED;&#x53E5;<br>NSString *sqlString = [NSString stringWithFormat:@&#x201D;delete from stu where s_id = %ld&#x201D;,SID];</li>
+</ul>
+<p>//2&#x6267;&#x884C;<br>int result = sqlite3_exec(db, sqlString.UTF8String, NULL, NULL, NULL);</p>
+<p>if (result == SQLITE_OK) {<br>NSLog(@&#x201D;&#x5220;&#x9664;&#x6210;&#x529F;,%ld&#x201D;,SID);</p>
+<p>}else{<br>NSLog(@&#x201D;&#x5220;&#x9664;&#x5931;&#x8D25;&#x201D;);<br>}<br>}</p>
+<p> 6.&#x66F4;&#x65B0;</p>
+<ul>
+<li>(void)upDateWithAge:(NSInteger )age<br>{<br>NSString *sqlString = @&#x201D;update stu set s_age = ?;&#x201D;;</li>
+</ul>
+<p>//2<br>sqlite3_stmt *stmt = NULL;</p>
+<p>//3<br>int result = sqlite3_exec(db, sqlString.UTF8String, -1, &amp;stmt, NULL);</p>
+<p>//4<br>sqlite3_bind_int64(stmt, 1, age);</p>
+<p>if (sqlite3_step(stmt) == SQLITE_OK) {<br>NSLog(@&#x201D;&#x66F4;&#x65B0;&#x6210;&#x529F;&#x201D;);<br>}else{<br>NSLog(@&#x201D;&#x66F4;&#x65B0;&#x5931;&#x8D25;&#x201D;);<br>}<br>sqlite3_finalize(stmt);<br>}</p>
+
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2016/06/28/SQLite/" style="float: left;">
-        ← 
-    </a>
     
-    
-    <a class="pull-right" href="/2016/06/28/the-start/">
-        the start →
+    <a class="pull-right" href="/2016/06/28/on-the-way/">
+        on the way →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/06/28/on-the-way/" data-title="on the way" data-url="http://yoursite.com/2016/06/28/on-the-way/"></div>
+<div class="ds-thread" data-thread-key="2016/06/28/SQLite/" data-title="" data-url="http://yoursite.com/2016/06/28/SQLite/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"duoshuo_name"};
 (function() {
