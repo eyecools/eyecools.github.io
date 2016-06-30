@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2016 | MokChen的博客</title>
+  <title>qq列表 | MokChen的博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -215,55 +215,118 @@
 
         <!-- ============================ END Hero Image =========================== -->
       
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/06/30/qq列表/">qq列表</a></h4>
-                            
-                            <p><time datetime="2016-06-30T12:37:26.000Z"><a href="/2016/06/30/qq列表/">2016-06-30</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/06/29/CoreData/">CoreData</a></h4>
-                            
-                            <p><time datetime="2016-06-29T11:04:51.000Z"><a href="/2016/06/29/CoreData/">2016-06-29</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/06/28/SQLite/">SQLite</a></h4>
-                            
-                            <p><time datetime="2016-06-28T12:03:07.000Z"><a href="/2016/06/28/SQLite/">2016-06-28</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-06-30T12:37:26.000Z" itemprop="datePublished">
+          2016-06-30
+      </time>
+    
+</span>
+                <h1>qq列表</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="&#x53EF;&#x6536;&#x7F29;&#x5206;&#x7EC4;&#x8868;&#x683C;"><a href="#&#x53EF;&#x6536;&#x7F29;&#x5206;&#x7EC4;&#x8868;&#x683C;" class="headerlink" title="&#x53EF;&#x6536;&#x7F29;&#x5206;&#x7EC4;&#x8868;&#x683C;"></a>&#x53EF;&#x6536;&#x7F29;&#x5206;&#x7EC4;&#x8868;&#x683C;</h3><p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x8BFE;&#x6536;&#x7F29;&#x7684;&#x7684;&#x5206;&#x7EC4;&#x8868;&#x683C;&#xFF0C;&#x70B9;&#x51FB;&#x5176;&#x4E2D;&#x7684;&#x7684;&#x4E00;&#x4E2A;cell&#x5C31;&#x4F1A;&#x5C55;&#x5F00;&#x76F8;&#x5E94;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x518D;&#x6B21;&#x70B9;&#x51FB;&#x65F6;&#x4F1A;&#x8FDB;&#x884C;&#x5217;&#x8868;&#x6536;&#x7F29;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x6548;&#x679C;&#x56FE;&#x548C;&#x6E90;&#x7801;<br><img src="/2016/06/30/qq&#x5217;&#x8868;/qq1.png" alt="qq&#x5217;&#x8868;"><br>&#x70B9;&#x51FB;&#x540E;&#x7684;&#x6548;&#x679C;&#xFF1A;<br><img src="/2016/06/30/qq&#x5217;&#x8868;/qq.png" alt="qq&#x5217;&#x8868;"></p>
+<pre><code class="bash">@property(nonatomic,strong)NSMutableArray *dataArray;
+//&#x7528;&#x53EF;&#x53D8;&#x5B57;&#x5178;&#x8BB0;&#x5F55;&#x6536;&#x7F29;&#x72B6;&#x6001;
+@property(nonatomic,strong)NSMutableDictionary *tagDic;
+@property(nonatomic,assign)BOOL re;
+@end
+@implementation ListViewController
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    //&#x6570;&#x636E;&#x6E90;
+    self.dataArray = [NSMutableArray arrayWithObjects:@[@<span class="string">&quot;&#x76D6;&#x4F26;&quot;</span>,@<span class="string">&quot;&#x8D75;&#x4FE1;&quot;</span>,@<span class="string">&quot;&#x5FB7;&#x83B1;&#x5384;&#x65AF;&quot;</span>],@[@<span class="string">&quot;&#x5173;&#x7FBD;&quot;</span>,@<span class="string">&quot;&#x5F20;&#x98DE;&quot;</span>,@<span class="string">&quot;&#x8D75;&#x4E91;&quot;</span>],@[@<span class="string">&quot;&#x8BF8;&#x845B;&#x4EAE;&quot;</span>,@<span class="string">&quot;&#x5E9E;&#x7EDF;&quot;</span>,@<span class="string">&quot;&#x53F8;&#x9A6C;&#x61FF;&quot;</span>],@[@<span class="string">&quot;&#x6768;&#x8001;&#x5E08;&quot;</span>,@<span class="string">&quot;&#x738B;&#x8001;&#x5E08;&quot;</span>,@<span class="string">&quot;&#x82CD;&#x8001;&#x5E08;&quot;</span>], nil];
+
+    //&#x521D;&#x59CB;&#x5316;&#x7528;&#x4E8E;&#x6807;&#x8BB0;&#x67D0;&#x4E00;&#x4E2A;section&#x7684;&#x6298;&#x53E0;&#x72B6;&#x6001;&#x7684;&#x5B57;&#x5178;
+    self.tagDic = [NSMutableDictionary dictionary];
+
+    self.re = YES;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIButton *btn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    btn.backgroundColor = [UIColor magentaColor];
+    [btn <span class="built_in">set</span>Title:[NSString stringWithFormat:@<span class="string">&quot;&#x7B2C;%ld&#x7EC4;&quot;</span>,section] <span class="keyword">for</span>State:(UIControlStateNormal)];
+    [btn addTarget:self action:@selector(Btn:) <span class="keyword">for</span>ControlEvents:(UIControlEventTouchUpInside)];
+    btn.tag = section;
+    <span class="built_in">return</span> btn;
+}
+-(void)Btn:(UIButton *)btn{
+    //&#x5982;&#x679C;&#x88AB;&#x70B9;&#x51FB;&#x7684;section&#x72B6;&#x6001;&#x4E3A;&#x201C;0&#xFF08;&#x6253;&#x5F00;&#xFF09;&#x201D;
+    <span class="keyword">if</span> ([[self.tagDic valueForKey:[NSString stringWithFormat:@<span class="string">&quot;%ld&quot;</span>,btn.tag]] isEqualToString:@<span class="string">&quot;0&quot;</span>]) {
+        //&#x90A3;&#x4E48;&#x5C06;&#x5176;&#x72B6;&#x6001;&#x6539;&#x4E3A;&#x201C;1&#xFF08;&#x5173;&#x95ED;&#xFF09;&#x201D;
+        [self.tagDic <span class="built_in">set</span>Value:@<span class="string">&quot;1&quot;</span> <span class="keyword">for</span>Key:[NSString stringWithFormat:@<span class="string">&quot;%ld&quot;</span>,btn.tag]];
+    }<span class="keyword">else</span>{
+        //&#x5426;&#x5219;&#x6539;&#x4E3A;&#x201C;0&#xFF08;&#x6253;&#x5F00;&#xFF09;&#x201D;
+        [self.tagDic <span class="built_in">set</span>Value:@<span class="string">&quot;0&quot;</span> <span class="keyword">for</span>Key:[NSString stringWithFormat:@<span class="string">&quot;%ld&quot;</span>,btn.tag]];
+    }
+    //&#x5237;&#x65B0;section
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:btn.tag] withRowAnimation:(UITableViewRowAnimationFade)];
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    <span class="built_in">return</span> self.dataArray.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //valueForKey&#xFF1A;&#x53D6;&#x503C;
+    //&#x5982;&#x679C;&#x6240;&#x9009;&#x5206;&#x533A;&#x72B6;&#x6001;&#x4E3A;&#x201C;0&#xFF08;&#x6253;&#x5F00;&#xFF09;&#x201D;
+    <span class="keyword">if</span> ([[self.tagDic valueForKey:[NSString stringWithFormat:@<span class="string">&quot;%ld&quot;</span>,section]] isEqualToString:@<span class="string">&quot;0&quot;</span>]) {
+        <span class="built_in">return</span> [self.dataArray[section]count];
+    }<span class="keyword">else</span>{
+        <span class="built_in">return</span> 0;
+    }
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@<span class="string">&quot;reuseIdentifier&quot;</span>];
+    <span class="keyword">if</span> (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@<span class="string">&quot;reuseIdentifier&quot;</span>
+                ];
+    }
+    //&#x8D4B;&#x4E88;&#x6BCF;&#x884C;&#x5185;&#x5BB9;&#xFF08;&#x5BF9;&#x5E94;&#x5206;&#x533A;&#x7684;&#x5BF9;&#x5E94;&#x884C;&#xFF09;
+    cell.textLabel.text = self.dataArray[indexPath.section][indexPath.row];
+
+    <span class="built_in">return</span> cell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    <span class="built_in">return</span> 50;
+}
+</code></pre>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/06/29/CoreData/">
+        CoreData →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/06/30/qq列表/" data-title="qq列表" data-url="http://yoursite.com/2016/06/30/qq列表/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
