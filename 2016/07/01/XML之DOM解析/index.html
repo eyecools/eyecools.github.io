@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>XML之SAX解析 | MokChen的博客</title>
+  <title>XML之DOM解析 | MokChen的博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -220,100 +220,59 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-07-01T11:27:38.000Z" itemprop="datePublished">
+      <time datetime="2016-07-01T11:45:58.000Z" itemprop="datePublished">
           2016-07-01
       </time>
     
 </span>
-                <h1>XML之SAX解析</h1>
+                <h1>XML之DOM解析</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h4 id="&#x89E3;&#x6790;&#x662F;&#x4EC0;&#x4E48;"><a href="#&#x89E3;&#x6790;&#x662F;&#x4EC0;&#x4E48;" class="headerlink" title="&#x89E3;&#x6790;&#x662F;&#x4EC0;&#x4E48;?"></a>&#x89E3;&#x6790;&#x662F;&#x4EC0;&#x4E48;?</h4><pre><code> &#x4ECE;&#x4E8B;&#x5148;&#x89C4;&#x5B9A;&#x7684;&#x683C;&#x5F0F;&#x4E2D;&#x63D0;&#x53D6;&#x6570;&#x636E;
- &#x89E3;&#x6790;&#x524D;&#x63D0;:
- 1.&#x63D0;&#x524D;&#x7EA6;&#x5B9A;&#x597D;&#x683C;&#x5F0F;
- 2.&#x6570;&#x636E;&#x63D0;&#x4F9B;&#x65B9;&#x6309;&#x7167;&#x683C;&#x5F0F;&#x5B58;&#x53D6;&#x6570;&#x636E;
- 3.&#x6570;&#x636E;&#x63D0;&#x53D6;&#x65B9;&#x6309;&#x7167;&#x683C;&#x5F0F;&#x83B7;&#x53D6;&#x6570;&#x636E;
+      		<h4 id="DOM&#x89E3;&#x6790;"><a href="#DOM&#x89E3;&#x6790;" class="headerlink" title="DOM&#x89E3;&#x6790;"></a>DOM&#x89E3;&#x6790;</h4><h4 id="1-&#x4ECB;&#x7ECD;"><a href="#1-&#x4ECB;&#x7ECD;" class="headerlink" title="1 &#x4ECB;&#x7ECD;"></a>1 &#x4ECB;&#x7ECD;</h4><p>Document Object Model&#xFF08;&#x6587;&#x6863;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#xFF09;&#xFF0C;&#x5C06;&#x6574;&#x4E2A;XML&#x6587;&#x6863;&#x8BFB;&#x5165;&#xFF0C;&#x6784;&#x5EFA;&#x9A7B;&#x7559;&#x5185;&#x5B58;&#x7684;&#x6811;&#x7ED3;&#x6784;&#xFF0C;&#x901A;&#x8FC7;&#x4FBF;&#x5229;&#x6811;&#x7ED3;&#x6784;&#x7684;&#x4EFB;&#x610F;&#x8282;&#x70B9;&#xFF0C;&#x8BFB;&#x53D6;&#x5B83;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x503C;<br> dom&#x89E3;&#x6790;&#x65F6;&#x9700;&#x8981;&#x5C06;xml&#x6574;&#x4F53;&#x8BFB;&#x5165;,&#x5E76;&#x4E14;&#x5C06;xml&#x7ED3;&#x6784;&#x5316;&#x6210;&#x6811;&#x72B6;<br>     &#x4F7F;&#x7528;&#x65F6;&#x7ECF;&#x8FC7;&#x6811;&#x72B6;&#x7ED3;&#x6784;&#x8FDB;&#x884C;&#x8BFB;&#x53D6;<br>     &#x5185;&#x5B58;&#x5E76;&#x4E0D;&#x4F1A;&#x5360;&#x7528;&#x592A;&#x591A;</p>
+<pre><code>Dom&#x89E3;&#x6790;&#x6709;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5DE5;&#x5177;&#x7C7B;,gData
+GDatatXMLNode&#x662F;&#x8C37;&#x6B4C;&#x63A8;&#x51FA;&#x7684;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;xml&#x89E3;&#x6790;&#x7C7B;,&#x662F;&#x5BF9;&#x91CC;&#x8FB9;&#x5199;&#x6EE1;&#x4E86;.dylib&#x7684;&#x5206;&#x88C5;,&#x901F;&#x5EA6;&#x8981;&#x6BD4;NSXMLParser&#x5FEB;&#x5F88;&#x591A;
+&#x7528;&#x8D77;&#x6765;&#x65B9;&#x4FBF;,&#x5BB9;&#x6613;&#x7406;&#x89E3;,&#x5728;&#x914D;&#x7F6E;&#x8FC7;&#x7A0B;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;
+</code></pre><h4 id="2-&#x6B65;&#x9AA4;"><a href="#2-&#x6B65;&#x9AA4;" class="headerlink" title="2 &#x6B65;&#x9AA4;"></a>2 &#x6B65;&#x9AA4;</h4><p> 2.1 &#x83B7;&#x53D6;GDataXMLNode.h/m&#x6587;&#x4EF6;&#xFF0C;&#x5C06;GDataXMLNode.m&#x6DFB;&#x52A0;&#x5230;&#x6240;&#x9700;&#x5DE5;&#x7A0B;<br> 2.2 &#x6DFB;&#x52A0;&#x7C7B;&#x5E93;libxml2.tbd&#x5230;&#x5DE5;&#x7A0B;&#x4E2D;<br> 2.3 &#x5728;&#x5DE5;&#x7A0B;&#x4E2D;&#x7684;&#x201D;Build setting&#x201D;&#x9875;&#x9762;&#x4E2D;&#x627E;&#x5230;&#x201C;header search path&#x201D;&#xFF0C;&#x6DFB;&#x52A0;/usr/include/libxml2</p>
+<h4 id="3-&#x4EE3;&#x7801;"><a href="#3-&#x4EE3;&#x7801;" class="headerlink" title="3 &#x4EE3;&#x7801;"></a>3 &#x4EE3;&#x7801;</h4><pre><code class="bash">&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;
+NSString *path = [[NSBundle mainBundle]pathForResource:@<span class="string">&quot;XML&quot;</span> ofType:@<span class="string">&quot;txt&quot;</span>];
 
- iOS&#x4E2D;&#x5E38;&#x89C1;&#x7684;&#x89E3;&#x6790;&#x683C;&#x5F0F;&#x6709; :XML Json
+    //2 &#x4EE5;data&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x89E3;&#x6790;
+    NSData *data = [NSData dataWithContentsOfFile:path];
 
- XML:
- &#x53EF;&#x6269;&#x5C55;&#x6807;&#x8BB0;&#x8BED;&#x8A00;,&#x4E3B;&#x6D41;&#x7684;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x4E4B;&#x4E00;
+    //3&#x521B;&#x5EFA; GDataXMLDocument&#x5BF9;&#x8C61;&#xFF0C;&#x6B64;&#x65F6;xml&#x6587;&#x6863;&#x5185;&#x7684;&#x6240;&#x6709;&#x8282;&#x70B9;&#x4EE5;&#x6811;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x5728;&#x4E8E; GDataXMLDocument&#x5BF9;&#x8C61;&#x4E2D;
+    GDataXMLDocument *xmlDocument = [[GDataXMLDocument alloc]initWithData:data options:0 error:nil];
 
- XML&#x4E3B;&#x8981;&#x4F5C;&#x7528;:
- 1.&#x7528;&#x4F5C;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
- 2.&#x7528;&#x4F5C;&#x6570;&#x636E;&#x4EA4;&#x6362;
- 3.&#x5185;&#x5BB9;&#x7BA1;&#x7406;
+//    4 &#x83B7;&#x53D6;xml&#x6587;&#x6863;&#x7684;&#x6839;&#x8282;&#x70B9;&#xFF0C;&#x6839;&#x8282;&#x70B9;&#x91CC;&#x5305;&#x542B;&#x4E86;XML&#x6587;&#x6863;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5185;&#x5BB9;
 
- XML&#x683C;&#x5F0F;&#x7ED3;&#x6784;:
- &#x9891;&#x8BB0;&#x5FC6;&#x56DE;&#x5FC6;
- &#x6982;&#x5FF5;:&#x6807;&#x7B7E; &#x8282;&#x70B9; &#x6839;&#x8282;&#x70B9; &#x6570;&#x636E;&#x9879;
+    GDataXMLElement *rootElememt = [xmlDocument rootElement];
 
- xml&#x89E3;&#x6790;&#x65B9;&#x5F0F;:
-    SAX DOM(&#x5B89;&#x5353;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;PULL&#x89E3;&#x6790;)
+    //5 &#x521B;&#x5EFA;&#x89E3;&#x6790;&#x51FA;&#x6765;&#x7684;&#x5B66;&#x751F;&#x6570;&#x7EC4;
+    self.dataArray = [NSMutableArray array];
 
- SAX&#x89E3;&#x6790; :Simple API for Xml
- &#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x7684;&#x4E00;&#x79CD;&#x89E3;&#x6790;xml&#x7684;&#x65B9;&#x5F0F;.&#x9010;&#x884C;&#x89E3;&#x6790;&#x6570;&#x636E;,&#x91C7;&#x7528;&#x4EE3;&#x7406;&#x56DE;&#x8C03;&#x65B9;&#x5F0F;
-
- &#x5904;&#x7406;&#x8FC7;&#x7A0B;:
- &#x5F00;&#x59CB;&#x6587;&#x6863;-&gt;&#x5F00;&#x59CB;&#x6807;&#x7B7E;-&gt;&#x89E3;&#x6790;&#x6570;&#x636E;&#x9879;-&gt;&#x7ED3;&#x675F;&#x6807;&#x7B7E;-&gt;&#x7ED3;&#x675F;&#x6587;&#x6863;
-
- SAX&#x662F;&#x7CFB;&#x7EDF;&#x63A8;&#x8350;&#x7684;&#x65B9;&#x5F0F;
-  NSXMLParser&#x662F;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684;XML&#x89E3;&#x6790;&#x7684;&#x5DE5;&#x5177;&#x7C7B;,&#x91C7;&#x7528;&#x7684;&#x5C31;&#x662F;SAX&#x89E3;&#x6790;&#x65B9;&#x5F0F;
-
-  ``` bash  
-     //1 &#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;
-NSString *path = [[NSBundle mainBundle]pathForResource:@&quot;XML&quot; ofType:@&quot;txt&quot;];
-
-//2 &#x901A;&#x8FC7;&#x8DEF;&#x5F84;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Data&#x5BF9;&#x8C61;
-NSData *data = [NSData dataWithContentsOfFile:path];
-
-//3 &#x521B;&#x5EFA;SAX&#x89E3;&#x6790;&#x4F7F;&#x7528;&#x7684;&#x5BF9;&#x8C61;
-
-NSXMLParser *xmlParser = [[NSXMLParser alloc]initWithData:data];
-</code></pre><p>//4 &#x9075;&#x5FAA;&#x4EE3;&#x7406;<br>    xmlParser.delegate = self;</p>
-<p>// 5 &#x5F00;&#x59CB;&#x89E3;&#x6790;<br>    [xmlParser parse];</p>
-<pre><code>``` 
-</code></pre><h4 id="&#x5F00;&#x59CB;&#x89E3;&#x6790;&#x6587;&#x6863;"><a href="#&#x5F00;&#x59CB;&#x89E3;&#x6790;&#x6587;&#x6863;" class="headerlink" title="&#x5F00;&#x59CB;&#x89E3;&#x6790;&#x6587;&#x6863;"></a>&#x5F00;&#x59CB;&#x89E3;&#x6790;&#x6587;&#x6863;</h4><pre><code class="bash">-(void)parserDidStartDocument:(NSXMLParser *)parser{
-    //&#x51C6;&#x5907;&#x6570;&#x636E;&#xFF0C;&#x81EA;&#x52A8;&#x6839;&#x636E;&#x6570;&#x636E;&#x5143;&#x7D20;&#x5F00;&#x8F9F;&#x7A7A;&#x95F4;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;0&#xFF09;
-    self.dataArray = [NSMutableArray arrayWithCapacity:0];
-}
-</code></pre>
-<h4 id="&#x5F00;&#x59CB;&#x89E3;&#x6790;&#x6807;&#x7B7E;"><a href="#&#x5F00;&#x59CB;&#x89E3;&#x6790;&#x6807;&#x7B7E;" class="headerlink" title="&#x5F00;&#x59CB;&#x89E3;&#x6790;&#x6807;&#x7B7E;"></a>&#x5F00;&#x59CB;&#x89E3;&#x6790;&#x6807;&#x7B7E;</h4><pre><code class="bash">-(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary&lt;NSString *,NSString *&gt; *)attributeDict{
-
-    //    &#x83B7;&#x53D6;&#x5230;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x89E3;&#x6790;&#x7684;&#x6807;&#x7B7E;&#xFF0C;&#x7ED9;&#x6807;&#x7B7E;&#x5C5E;&#x6027;&#x8D4B;&#x503C;
-    _currentElement = elementName;
-
-    <span class="keyword">if</span> ([elementName  isEqualToString:@<span class="string">&quot;student&quot;</span>]) {
-<span class="comment">#warning &#x521B;&#x5EFA;&#x5E76;&#x521D;&#x59CB;&#x5316;Model&#xFF0C;&#x5982;&#x679C;&#x6807;&#x7B7E;&#x662F;student&#xFF0C;&#x90A3;&#x4E48;&#x521B;&#x5EFA;model&#x7C7B;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;model&#x6DFB;&#x52A0;&#x5230;&#x6570;&#x7EC4;&#x6E90;&#x5F53;&#x4E2D;&#xFF08;&#x5982;&#x679C;&#x4E0D;&#x662F;&#xFF0C;&#x5219;&#x4E0D;&#x521B;&#x5EFA;&#xFF0C;model&#x7684;&#x9884;&#x5EFA;&#x7ACB;&#xFF09;</span>
+    //&#x4FBF;&#x5229;&#x6839;&#x8282;&#x70B9;&#x300A;students&#x300B;&#x7684;&#x6240;&#x6709;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x300A;student&#x300B;
+    <span class="keyword">for</span> (GDataXMLElement *subElement <span class="keyword">in</span> rootElememt.children) {
         Student *stu = [Student new];
-        [self.dataArray  addObject:stu];
-    }
-}
-</code></pre>
-<h4 id="&#x5FAA;&#x73AF;&#x8BFB;&#x53D6;&#x6807;&#x7B7E;&#x7684;&#x503C;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x5F97;&#x5230;&#x8282;&#x70B9;&#x91CC;&#x50A8;&#x5B58;&#x7684;&#x4FE1;&#x606F;"><a href="#&#x5FAA;&#x73AF;&#x8BFB;&#x53D6;&#x6807;&#x7B7E;&#x7684;&#x503C;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x5F97;&#x5230;&#x8282;&#x70B9;&#x91CC;&#x50A8;&#x5B58;&#x7684;&#x4FE1;&#x606F;" class="headerlink" title="&#x5FAA;&#x73AF;&#x8BFB;&#x53D6;&#x6807;&#x7B7E;&#x7684;&#x503C;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x5F97;&#x5230;&#x8282;&#x70B9;&#x91CC;&#x50A8;&#x5B58;&#x7684;&#x4FE1;&#x606F;"></a>&#x5FAA;&#x73AF;&#x8BFB;&#x53D6;&#x6807;&#x7B7E;&#x7684;&#x503C;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x5F97;&#x5230;&#x8282;&#x70B9;&#x91CC;&#x50A8;&#x5B58;&#x7684;&#x4FE1;&#x606F;</h4><pre><code class="bash">-(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
-    //&#x5C06;&#x503C;&#x5B58;&#x5165;model&#x7C7B;&#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x4E2D;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5FAA;&#x73AF;&#x6267;&#x884C;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x53D6;&#x5F97;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x3010;&lt;student&gt;&lt;/student&gt;&#x662F;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x6254;&#x8FDB;&#x6570;&#x7EC4;&#x91CC;&#xFF0C;&#x6328;&#x4E2A;&#x8FDB;&#x884C;&#x53D6;&#x503C;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x53D6;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#xFF0C;&#x8BF4;&#x660E;&#x5168;&#x90E8;&#x53D6;&#x5B8C;&#x3011;
-    Student *stu = self.dataArray.lastObject;
-    //NSLog(@<span class="string">&quot;%@&quot;</span>,self.dataArray.lastObject);
+        //&#x518D;&#x4FBF;&#x5229;&#x5B50;&#x8282;&#x70B9;&#x300A;student&#x300B;&#x4E0B;&#x7684;&#x5B50;&#x6807;&#x7B7E;name&#xFF0C;zi&#xFF0C;say&#xFF0C;&#xFF0C;weapon&#xFF0C;&#x53BB;&#x9664;&#x5B50;&#x6807;&#x7B7E;&#x5185;&#x5BB9;&#xFF0C;&#x8D4B;&#x503C;&#x7ED9;stu
+        <span class="keyword">for</span> (GDataXMLElement *contactElement <span class="keyword">in</span> subElement.children) {
+            //&#x8FD9;&#x91CC;&#x7684;name&#x6307;name&#xFF0C;zi&#xFF0C;say&#x7B49;&#x6807;&#x7B7E;
+            <span class="keyword">if</span> ([contactElement.name isEqualToString:@<span class="string">&quot;name&quot;</span>]) {
+                stu.name = contactElement.stringValue;
 
-// &#x6839;&#x636E;&#x5F53;&#x524D;&#x5DF2;&#x7ECF;&#x89E3;&#x6790;&#x51FA;&#x6765;&#x7684;&#x6807;&#x7B7E;&#x8DDF;stu&#x7684;&#x5C5E;&#x6027;&#x5BF9;&#x5E94;&#xFF0C;&#x8D4B;&#x503C;&#x7ED9;stu&#x4E2D;&#x7684;&#x5C5E;&#x6027;
-    [stu <span class="built_in">set</span>Value:string <span class="keyword">for</span>Key:_currentElement];
-}
-</code></pre>
-<h4 id="&#x7ED3;&#x675F;&#x6807;&#x7B7E;&#x89E3;&#x6790;"><a href="#&#x7ED3;&#x675F;&#x6807;&#x7B7E;&#x89E3;&#x6790;" class="headerlink" title="&#x7ED3;&#x675F;&#x6807;&#x7B7E;&#x89E3;&#x6790;"></a>&#x7ED3;&#x675F;&#x6807;&#x7B7E;&#x89E3;&#x6790;</h4><pre><code class="bash">-(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
-    //&#x6CA1;&#x6709;&#x6807;&#x7B7E;&#xFF0C;&#x89E3;&#x6790;&#x7ED3;&#x675F;
-    _currentElement = nil;
-}
-</code></pre>
-<h4 id="&#x7ED3;&#x675F;&#x89E3;&#x6790;&#x6587;&#x6863;"><a href="#&#x7ED3;&#x675F;&#x89E3;&#x6790;&#x6587;&#x6863;" class="headerlink" title="&#x7ED3;&#x675F;&#x89E3;&#x6790;&#x6587;&#x6863;"></a>&#x7ED3;&#x675F;&#x89E3;&#x6790;&#x6587;&#x6863;</h4><pre><code class="bash">-(void)parserDidEndDocument:(NSXMLParser *)parser{
-    <span class="keyword">for</span> (Student *stu  <span class="keyword">in</span> self.dataArray) {
-        NSLog(@<span class="string">&quot;%@&quot;</span>,stu);
+            }<span class="keyword">else</span> <span class="keyword">if</span> ([contactElement.name isEqualToString:@<span class="string">&quot;zi&quot;</span>]) {
+                stu.zi = contactElement.stringValue;
+            }<span class="keyword">else</span> <span class="keyword">if</span> ([contactElement.name isEqualToString:@<span class="string">&quot;say&quot;</span>]) {
+                stu.say = contactElement.stringValue;
+            }<span class="keyword">else</span> <span class="keyword">if</span> ([contactElement.name isEqualToString:@<span class="string">&quot;weapon&quot;</span>]) {
+                stu.weapon = contactElement.stringValue;
+            }
+            [stu <span class="built_in">set</span>Value:contactElement.stringValue <span class="keyword">for</span>KeyPath:contactElement.name];
+
+        }[self.dataArray addObject:stu];
+        <span class="keyword">for</span> (Student *stu <span class="keyword">in</span> self.dataArray) {
+            NSLog(@<span class="string">&quot;%@&quot;</span>,stu);
+        }
     }
-}
-</code></pre>
-<h4 id="&#x9519;&#x8BEF;&#x62A5;&#x544A;"><a href="#&#x9519;&#x8BEF;&#x62A5;&#x544A;" class="headerlink" title="&#x9519;&#x8BEF;&#x62A5;&#x544A;"></a>&#x9519;&#x8BEF;&#x62A5;&#x544A;</h4><pre><code class="bash">-(void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError{
-    NSLog(@<span class="string">&quot;&#x9519;&#x8BEF;&#x62A5;&#x544A;&#xFF1A;%@&quot;</span>,parseError);
-}
 </code></pre>
 
             <div class="clearfix"></div>
@@ -321,19 +280,15 @@ NSXMLParser *xmlParser = [[NSXMLParser alloc]initWithData:data];
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2016/07/01/XML之DOM解析/" style="float: left;">
-        ← XML之DOM解析
-    </a>
     
-    
-    <a class="pull-right" href="/2016/06/30/qq列表/">
-        qq列表 →
+    <a class="pull-right" href="/2016/07/01/XML之SAX解析/">
+        XML之SAX解析 →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/07/01/XML之SAX解析/" data-title="XML之SAX解析" data-url="http://yoursite.com/2016/07/01/XML之SAX解析/"></div>
+<div class="ds-thread" data-thread-key="2016/07/01/XML之DOM解析/" data-title="XML之DOM解析" data-url="http://yoursite.com/2016/07/01/XML之DOM解析/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"duoshuo_name"};
 (function() {
