@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>网络请求 | MokChen的博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="MokChen的博客">
+    <meta name="author" content="MokChen">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="MokChen的博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://http://eyecools.github.io/" class="animsition-link">MokChen</a></li>
+                    
+                    <li><a href="http://http://eyecools.github.io/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">MokChen的博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/u/5578022641/home?wvr=5" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="background: url(/img/1.jpg) no-repeat center center fixed;background-size: cover">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	
+                                <h2>A FEW STEPS    A FEW DEEP DEGREES</h2>
+                                <p></p>
+				    			
+                                <h2></h2>
+                                <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+				    			
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-07-04T13:14:06.000Z" itemprop="datePublished">
+          2016-07-04
+      </time>
+    
+</span>
+                <h1>网络请求</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h4 id="HTTP&#x5E38;&#x89C1;&#x7684;&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;"><a href="#HTTP&#x5E38;&#x89C1;&#x7684;&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;" class="headerlink" title="HTTP&#x5E38;&#x89C1;&#x7684;&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;"></a>HTTP&#x5E38;&#x89C1;&#x7684;&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</h4><p>1&#x3001;&#x6700;&#x57FA;&#x672C;&#x7684;&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;&#xFF1A;GET&#x3001;POST&#x3001;PUT&#x3001;DELETE&#xFF0C;&#x8FD9;&#x56DB;&#x79CD;&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;&#x5BF9;&#x5E94;&#x7740;&#x5BF9;&#x8D44;&#x6E90;&#x7684;&#x67E5;&#x3001;&#x6539;&#x3001;&#x589E;&#x3001;&#x5220;4&#x4E2D;&#x64CD;&#x4F5C;&#x3002;<br>2&#x3001;GET&#xFF1A;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x6216;&#x67E5;&#x8BE2;&#x8D44;&#x6E90;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5982;&#x679C;&#x8BF7;&#x6C42;URL&#x662F;&#x4E00;&#x4E2A;&#x4EA7;&#x751F;&#x6570;&#x636E;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x4F7F;&#x7528;GET&#x7684;&#x8BDD;&#xFF0C;&#x9700;&#x8981;&#x7684;&#x662F;&#x4EA7;&#x751F;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x679C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5BF9;&#x4EA7;&#x751F;&#x8FC7;&#x7A0B;&#x7684;&#x63CF;&#x8FF0;&#xFF08;&#x5982;&#x4F55;&#x4EA7;&#x751F;&#x6570;&#x636E;&#x7684;&#xFF09;<br>3&#x3001;POST&#xFF1A;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x66F4;&#x65B0;&#x6570;&#x636E;&#xFF0C;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#xFF0C;&#x544A;&#x77E5;&#x670D;&#x52A1;&#x5668;&#x63A5;&#x6536;&#x8BF7;&#x6C42;&#x540E;&#x9762;&#x7684;&#x5B9E;&#x4F53;&#xFF08;BODY&#xFF09;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;POST&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x4FE1;&#x606F;&#xFF0C;&#x800C;&#x9700;&#x8981;&#x63D0;&#x4EA4;&#x7684;&#x6570;&#x636E;&#x5728;&#x4FE1;&#x606F;&#x540E;&#x9762;&#x7684;&#x5B9E;&#x4F53;&#x4E2D;&#xFF08;BODY&#xFF09;&#x3002;</p>
+<h4 id="GET&#x540C;&#x6B65;&#x8BF7;&#x6C42;"><a href="#GET&#x540C;&#x6B65;&#x8BF7;&#x6C42;" class="headerlink" title="GET&#x540C;&#x6B65;&#x8BF7;&#x6C42;"></a>GET&#x540C;&#x6B65;&#x8BF7;&#x6C42;</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">-(void)getTB{</span><br><span class="line">    //1&#x3001;&#x521B;&#x5EFA;URL&#xFF08;&#x4F7F;&#x7528;NSURL&#x5BF9;&#x8C61;&#xFF09;</span><br><span class="line">    NSURL *url = [NSURL URLWithString:GET_URL];</span><br><span class="line">    </span><br><span class="line">    //2&#x3001;&#x6839;&#x636E;URL&#x521B;&#x5EFA;&#x5177;&#x4F53;&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</span><br><span class="line">    /*</span><br><span class="line">     requestWithURL: &#x63A5;&#x53E3;</span><br><span class="line">     cachePolicy: &#x7F13;&#x5B58;&#x7B56;&#x7565;</span><br><span class="line">        &#x2460;NSURLRequestUseProtocolCachePolicy&#xFF08;&#x57FA;&#x7840;&#x7B56;&#x7565;&#xFF09;&#xFF1A;&#x9ED8;&#x8BA4;&#x7F13;&#x5B58;&#x7B56;&#x7565;&#xFF0C;&#x5982;&#x679C;&#x7F13;&#x5B58;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x76F4;&#x63A5;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x3002;</span><br><span class="line">        &#x2461;NSURLRequestReloadIgnoringLocalCacheData&#xFF1A;&#x5FFD;&#x7565;&#x672C;&#x5730;&#x7F13;&#x5B58;&#xFF0C;&#x76F4;&#x63A5;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x83B7;&#x53D6;&#x3002;</span><br><span class="line">        &#x2462;NSURLRequestReturnCacheDataElseLoad&#xFF1A;&#x9996;&#x5148;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x672C;&#x5730;&#x7F13;&#x5B58;&#xFF0C;&#x624D;&#x4F1A;&#x53BB;&#x539F;&#x5730;&#x5740;&#x4E0B;&#x8F7D;&#x3002;</span><br><span class="line">        &#x2463;NSURLRequestReturnCacheDataDontLoad&#xFF1A;&#x4F7F;&#x7528;&#x672C;&#x5730;&#x672C;&#x5730;&#x7F13;&#x5B58;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#xFF0C;&#x4E5F;&#x4E0D;&#x53BB;&#x670D;&#x52A1;&#x5668;&#x52A0;&#x8F7D;&#xFF0C;&#x5BFC;&#x81F4;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x79BB;&#x7EBF;&#x64CD;&#x4F5C;&#x3002;</span><br><span class="line">     timeoutInterval:&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x5EF6;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5982;&#x679C;&#x8D85;&#x8FC7;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#xFF0C;&#x90A3;&#x4E48;&#x8BF7;&#x6C42;&#x7EC8;&#x6B62;&#xFF08;&#x8FDE;&#x63A5;&#x8D85;&#x65F6;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x79D2;&#xFF09;</span><br><span class="line">     */</span><br><span class="line">    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:(NSURLRequestUseProtocolCachePolicy) timeoutInterval:30];</span><br><span class="line">    </span><br><span class="line">    //3&#x3001;&#x63A5;&#x6536;&#x7F51;&#x7EDC;&#x6570;&#x636E;&#xFF08;&#x4F7F;&#x7528;NSData&#x5BF9;&#x8C61;&#xFF09;</span><br><span class="line">    /*</span><br><span class="line">     sendSynchronousRequest: &#x8BF7;&#x6C42;&#x5BF9;&#x8C61;&#xFF08;NSURLRequest&#x5BF9;&#x8C61;&#xFF09;</span><br><span class="line">     returningResponse: &#x5B58;&#x50A8;&#x4E00;&#x4E9B;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x7684;&#x4FE1;&#x606F;&#xFF08;&#x4E00;&#x822C;&#x653E;nil&#xFF0C;&#x6709;&#x5305;&#x4F53;&#x7684;&#x8BDD;&#x653E;&#x5305;&#x4F53;&#xFF09;</span><br><span class="line">     error:&#x9519;&#x8BEF;&#x4FE1;&#x606F;</span><br><span class="line">     */</span><br><span class="line">    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];</span><br><span class="line">//    NSLog(@<span class="string">&quot;------%@&quot;</span>,data);</span><br><span class="line">    </span><br><span class="line">    //json&#x89E3;&#x6790;</span><br><span class="line">    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingAllowFragments) error:nil];</span><br><span class="line">    </span><br><span class="line">    NSLog(@<span class="string">&quot;GET&#x540C;&#x6B65;&#xFF1A;%@&quot;</span>,dict);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h4 id="POST&#x540C;&#x6B65;&#x8BF7;&#x6C42;"><a href="#POST&#x540C;&#x6B65;&#x8BF7;&#x6C42;" class="headerlink" title="POST&#x540C;&#x6B65;&#x8BF7;&#x6C42;"></a>POST&#x540C;&#x6B65;&#x8BF7;&#x6C42;</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">-(void)postTB{</span><br><span class="line">    //1&#x3001;&#x521B;&#x5EFA;URL</span><br><span class="line">    NSURL *url = [NSURL URLWithString:POST_URL];</span><br><span class="line">    </span><br><span class="line">    //2&#x3001;&#x521B;&#x5EFA;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x3010;post&#x8BF7;&#x6C42;&#x5FC5;&#x987B;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x53EF;&#x53D8;&#x8BF7;&#x6C42;&#x3011;</span><br><span class="line">    NSMutableURLRequest *mutableRequest = [NSMutableURLRequest requestWithURL:url];</span><br><span class="line">    </span><br><span class="line">    //2.1 &#x8BBE;&#x7F6E;BODY</span><br><span class="line">    //2.1.1 &#x521B;&#x5EFA;&#x5B57;&#x7B26;&#x4E32;</span><br><span class="line">    NSString *dataString = POST_BODY;</span><br><span class="line">    </span><br><span class="line">    //2.2 &#x4F7F;&#x7528;NSData&#x7C7B;&#x578B;&#x63A5;&#x6536;&#x8F6C;&#x7801;&#x540E;&#x7684;BODY&#xFF08;UTF8&#xFF09;</span><br><span class="line">    NSData *postData = [dataString dataUsingEncoding:NSUTF8StringEncoding];</span><br><span class="line">    </span><br><span class="line">    //3&#x3001;&#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;&#x683C;&#x5F0F;&#x4E3A;post(POST&#x5FC5;&#x987B;&#x5927;&#x5199;)</span><br><span class="line">    [mutableRequest <span class="built_in">set</span>HTTPMethod:@<span class="string">&quot;POST&quot;</span>];</span><br><span class="line">    </span><br><span class="line">    //4&#x3001;&#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;&#x4F53;&#xFF08;&#x8F6C;&#x7801;&#x540E;&#x7684;BODY&#xFF09;</span><br><span class="line">    [mutableRequest <span class="built_in">set</span>HTTPBody:postData];</span><br><span class="line">    </span><br><span class="line">    //5&#x3001;&#x63A5;&#x6536;&#x6570;&#x636E;</span><br><span class="line">    NSData *data = [NSURLConnection sendSynchronousRequest:mutableRequest returningResponse:nil error:nil];</span><br><span class="line">    </span><br><span class="line">    //6&#x3001;json&#x89E3;&#x6790;</span><br><span class="line">    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingAllowFragments) error:nil];</span><br><span class="line">    </span><br><span class="line">    NSLog(@<span class="string">&quot;POST&#x540C;&#x6B65;&#xFF1A;%@&quot;</span>,dict);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h4 id="GET&#x5F02;&#x6B65;&#x8BF7;&#x6C42;"><a href="#GET&#x5F02;&#x6B65;&#x8BF7;&#x6C42;" class="headerlink" title="GET&#x5F02;&#x6B65;&#x8BF7;&#x6C42;"></a>GET&#x5F02;&#x6B65;&#x8BF7;&#x6C42;</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">-(void)getYB{</span><br><span class="line">    //1&#x3001;&#x521B;&#x5EFA;URL</span><br><span class="line">    NSURL *url = [NSURL URLWithString:GET_URL];</span><br><span class="line">    </span><br><span class="line">    //2&#x3001;&#x521B;&#x5EFA;&#x8BF7;&#x6C42;</span><br><span class="line">    NSURLRequest *request = [NSURLRequest requestWithURL:url];</span><br><span class="line">    </span><br><span class="line">    //3&#x3001;&#x63A5;&#x6536;&#x6570;&#x636E;</span><br><span class="line">    //&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;Block</span><br><span class="line">    /*</span><br><span class="line">     sendAsynchronousRequest: &#x8BF7;&#x6C42;&#x5BF9;&#x8C61;</span><br><span class="line">     queue: [NSOperationQueue mainQueue]&#x7EBF;&#x7A0B;&#x961F;&#x5217;&#xFF0C;block&#x5728;&#x54EA;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E2D;&#x6267;&#x884C;&#xFF0C;&#x5728;&#x4E3B;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x4E5F;&#x53EB;&#x4E32;&#x884C;&#x961F;&#x5217;</span><br><span class="line">     completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {</span><br><span class="line">            response&#xFF1A;&#x643A;&#x5E26;&#x7740;&#x63A5;&#x53E3;&#x7684;&#x4FE1;&#x606F;&#x3002;</span><br><span class="line">            data&#xFF1A;&#x8BF7;&#x6C42;&#x56DE;&#x6765;&#x7684;&#x6570;&#x636E;&#x3002;</span><br><span class="line">     }];</span><br><span class="line">     */</span><br><span class="line">    </span><br><span class="line">    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {</span><br><span class="line">        //&#x5224;&#x65AD;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x662F;&#x5426;&#x4E3A;&#x7A7A;</span><br><span class="line">        <span class="keyword">if</span> (connectionError == nil) {</span><br><span class="line">            //&#x8FDB;&#x884C;&#x89E3;&#x6790;json</span><br><span class="line">            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingAllowFragments) error:nil];</span><br><span class="line">            NSLog(@<span class="string">&quot;GET&#x5F02;&#x6B65;&#xFF1A;%@&quot;</span>,dict);</span><br><span class="line">        }</span><br><span class="line">    }];</span><br><span class="line">    </span><br><span class="line">    //&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x4EE3;&#x7406;</span><br><span class="line">    /*</span><br><span class="line">     connectionWithRequest: NSURLRequest&#x5BF9;&#x8C61;</span><br><span class="line">     delegate:&#x4EE3;&#x7406;&#x4EBA;</span><br><span class="line">     */</span><br><span class="line">    [NSURLConnection connectionWithRequest:request delegate:self];</span><br><span class="line">}</span><br><span class="line"><span class="comment">#pragma mark  ----   NSURLConnectionDataDelegate&#x65B9;&#x6CD5;  ----</span></span><br><span class="line">//&#x670D;&#x52A1;&#x5668;&#x5F00;&#x59CB;&#x54CD;&#x5E94;</span><br><span class="line">- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{</span><br><span class="line">    //&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;</span><br><span class="line">    self.resultData = [NSMutableData data];</span><br><span class="line">}</span><br><span class="line">//&#x5F00;&#x59CB;&#x63A5;&#x6536;&#x6570;&#x636E;</span><br><span class="line">//&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x91CD;&#x590D;&#x6267;&#x884C;&#xFF0C;&#x5C06;&#x6BCF;&#x6B21;&#x5F97;&#x5230;&#x7684;&#x6BCF;&#x6BB5;&#x6570;&#x636E;&#x62FC;&#x63A5;&#x5230;self.resultData</span><br><span class="line">- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{</span><br><span class="line">    NSLog(@<span class="string">&quot;+++++++%@&quot;</span>,self.resultData);</span><br><span class="line">    NSLog(@<span class="string">&quot;-------%@&quot;</span>,data);</span><br><span class="line">    [self.resultData appendData:data];</span><br><span class="line">}</span><br><span class="line">//&#x7ED3;&#x675F;&#x670D;&#x52A1;&#x5668;</span><br><span class="line">- (void)connectionDidFinishLoading:(NSURLConnection *)connection{</span><br><span class="line">    //&#x8FDB;&#x884C;&#x89E3;&#x6790;</span><br><span class="line">    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:self.resultData options:(NSJSONReadingAllowFragments) error:nil];</span><br><span class="line">    NSLog(@<span class="string">&quot;GET&#x5F02;&#x6B65;&#x4EE3;&#x7406;&#xFF1A;%@&quot;</span>,dict);</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h4 id="POST&#x5F02;&#x6B65;&#x8BF7;&#x6C42;"><a href="#POST&#x5F02;&#x6B65;&#x8BF7;&#x6C42;" class="headerlink" title="POST&#x5F02;&#x6B65;&#x8BF7;&#x6C42;"></a>POST&#x5F02;&#x6B65;&#x8BF7;&#x6C42;</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">-(void)postYB{</span><br><span class="line">    //1&#x3001;&#x521B;&#x5EFA;URL</span><br><span class="line">    NSURL *url = [NSURL URLWithString:POST_URL];</span><br><span class="line">    </span><br><span class="line">    //2&#x3001;&#x521B;&#x5EFA;&#x53EF;&#x53D8;&#x8BF7;&#x6C42;&#x5BF9;&#x8C61;</span><br><span class="line">    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];</span><br><span class="line">    </span><br><span class="line">    //2.1 &#x521B;&#x5EFA;body</span><br><span class="line">    NSString *string = POST_BODY;</span><br><span class="line">    </span><br><span class="line">    //2.2 &#x8F6C;&#x7801;</span><br><span class="line">    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];</span><br><span class="line">    </span><br><span class="line">    //3&#x3001;&#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;&#x4E3A;POST(&#x5FC5;&#x987B;&#x5927;&#x5199;)</span><br><span class="line">    [request <span class="built_in">set</span>HTTPMethod:@<span class="string">&quot;POST&quot;</span>];</span><br><span class="line">    </span><br><span class="line">    //4&#x3001;&#x7ED9;&#x8BF7;&#x6C42;&#x8FFD;&#x52A0;BODY</span><br><span class="line">    [request <span class="built_in">set</span>HTTPBody:data];</span><br><span class="line">    </span><br><span class="line">    //5&#x3001;&#x63A5;&#x6536;&#x6570;&#x636E;</span><br><span class="line">    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {</span><br><span class="line">        //6&#x3001;&#x5224;&#x65AD;</span><br><span class="line">        <span class="keyword">if</span> (connectionError == nil) {</span><br><span class="line">            //7&#x3001;&#x89E3;&#x6790;</span><br><span class="line">            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingAllowFragments) error:nil];</span><br><span class="line">            NSLog(@<span class="string">&quot;POST&#x5F02;&#x6B65;Block&#xFF1A;%@&quot;</span>,dict);</span><br><span class="line">        }</span><br><span class="line">    }];</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h4 id="GETSession&#x8BF7;&#x6C42;"><a href="#GETSession&#x8BF7;&#x6C42;" class="headerlink" title="GETSession&#x8BF7;&#x6C42;"></a>GETSession&#x8BF7;&#x6C42;</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">-(void)getSession{</span><br><span class="line">    //1&#x3001;&#x521B;&#x5EFA;URL</span><br><span class="line">    NSURL *url = [NSURL URLWithString:GET_URL];</span><br><span class="line">    </span><br><span class="line">    //2&#x3001;&#x521B;&#x5EFA;session&#x5BF9;&#x8C61;</span><br><span class="line">    //NSURLSession&#x662F;&#x57FA;&#x4E8E;&#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#x76F8;&#x5173;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x90FD;&#x653E;&#x5728;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x91CC;</span><br><span class="line">    NSURLSession *session = [NSURLSession sharedSession];//&#x4F7F;&#x7528;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684;&#x5168;&#x5C40;&#x7684;NSURLSession&#x7684;&#x4E00;&#x4E2A;&#x5355;&#x4F8B;&#x3002;</span><br><span class="line">    </span><br><span class="line">    //3&#x3001;&#x521B;&#x5EFA;task&#x4EFB;&#x52A1;&#x5BF9;&#x8C61;</span><br><span class="line">    //NSURLSessionTask&#xFF0C;&#x5C31;&#x662F;NSURLSession&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x7684;&#x5BF9;&#x8C61;</span><br><span class="line">    NSURLSessionTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * data, NSURLResponse * response, NSError * error) {</span><br><span class="line">        <span class="keyword">if</span> (error == nil) {</span><br><span class="line">            //&#x89E3;&#x6790;</span><br><span class="line">            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingAllowFragments) error:nil];</span><br><span class="line">            NSLog(@<span class="string">&quot;getSession :%@&quot;</span>,dict);</span><br><span class="line">        }</span><br><span class="line">    }];</span><br><span class="line">    //&#x6267;&#x884C;&#x4EFB;&#x52A1;&#xFF08;&#x4E00;&#x5B9A;&#x8981;&#x8BB0;&#x4F4F;&#x6267;&#x884C;&#xFF09;</span><br><span class="line">    [task resume];</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<h4 id="POSTSession&#x8BF7;&#x6C42;"><a href="#POSTSession&#x8BF7;&#x6C42;" class="headerlink" title="POSTSession&#x8BF7;&#x6C42;"></a>POSTSession&#x8BF7;&#x6C42;</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">-(void)postSession{</span><br><span class="line">    //1&#x3001;&#x521B;&#x5EFA;URL</span><br><span class="line">    NSURL *url = [NSURL URLWithString:POST_URL];</span><br><span class="line">    </span><br><span class="line">    //2&#x3001;&#x521B;&#x5EFA;&#x8BF7;&#x6C42;&#xFF08;&#x53EF;&#x53D8;&#xFF09;</span><br><span class="line">    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];</span><br><span class="line">    </span><br><span class="line">    //2.1 &#x521B;&#x5EFA;BODY</span><br><span class="line">    NSString *string = POST_BODY;</span><br><span class="line">    //2.2 &#x5BF9;BODY&#x8F6C;&#x7801;</span><br><span class="line">    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];</span><br><span class="line">    </span><br><span class="line">    [request <span class="built_in">set</span>HTTPBody:data];</span><br><span class="line">    [request <span class="built_in">set</span>HTTPMethod:@<span class="string">&quot;POST&quot;</span>];</span><br><span class="line">    </span><br><span class="line">    //3&#x3001;&#x521B;&#x5EFA;session&#x5BF9;&#x8C61;</span><br><span class="line">    NSURLSession *session = [NSURLSession sharedSession];</span><br><span class="line">    </span><br><span class="line">    //4&#x3001;&#x521B;&#x5EFA;&#x4EFB;&#x52A1;task</span><br><span class="line">    NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {</span><br><span class="line">        <span class="keyword">if</span> (error == nil) {</span><br><span class="line">            //5&#x3001;&#x89E3;&#x6790;</span><br><span class="line">            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingAllowFragments) error:nil];</span><br><span class="line">            NSLog(@<span class="string">&quot;postSession &#xFF1A;%@&quot;</span>,dict);</span><br><span class="line">        }</span><br><span class="line">    }];</span><br><span class="line">    //&#x542F;&#x52A8;&#x4EFB;&#x52A1;</span><br><span class="line">    [task resume];</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/07/01/JSON解析/">
+        JSON解析 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/07/04/网络请求/" data-title="网络请求" data-url="http://yoursite.com/2016/07/04/网络请求/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By MokChen. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/u/5578022641/home?wvr=5" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
