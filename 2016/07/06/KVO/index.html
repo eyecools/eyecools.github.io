@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>MokChen的博客</title>
+  <title>KVO | MokChen的博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -214,266 +214,66 @@
         <!-- // End height spacing helper -->
 
         <!-- ============================ END Hero Image =========================== -->
-      <!-- ============================ Content =========================== -->
-
+      
 <section id="intro">
     <div class="container">
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/07/06/KVO/">KVO</a></h3>
-                    <span>
-                        <span class="post-meta">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
       <time datetime="2016-07-06T11:44:32.000Z" itemprop="datePublished">
           2016-07-06
       </time>
     
 </span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        KVO,&#x5373;&#xFF1A;Key-Value Observing&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x673A;&#x5236;&#xFF0C;&#x5F53;&#x6307;&#x5B9A;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x88AB;&#x4FEE;&#x6539;&#x540E;&#xFF
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/07/06/KVO/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
+                <h1>KVO</h1>
             </div>
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/07/04/网络请求/">网络请求</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-07-04T13:14:06.000Z" itemprop="datePublished">
-          2016-07-04
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        HTTP&#x5E38;&#x89C1;&#x7684;&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;1&#x3001;&#x6700;&#x57FA;&#x672C;&#x7684;&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;&#xFF1A;GET&#x3001;POST&#x3001;PUT&#x3001;DELETE&#xFF0C;&#x8FD9;&#x56DB;&#x79CD;&#x8BF7
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/07/04/网络请求/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>KVO,&#x5373;&#xFF1A;Key-Value Observing&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x673A;&#x5236;&#xFF0C;&#x5F53;&#x6307;&#x5B9A;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x88AB;&#x4FEE;&#x6539;&#x540E;&#xFF0C;&#x5219;&#x5BF9;&#x8C61;&#x5C31;&#x4F1A;&#x63A5;&#x53D7;&#x5230;&#x901A;&#x77E5;&#x3002;&#x7B80;&#x5355;&#x7684;&#x8BF4;&#x5C31;&#x662F;&#x6BCF;&#x6B21;&#x6307;&#x5B9A;&#x7684;&#x88AB;&#x89C2;&#x5BDF;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x88AB;&#x4FEE;&#x6539;&#x540E;&#xFF0C;KVO&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x901A;&#x77E5;&#x76F8;&#x5E94;&#x7684;&#x89C2;&#x5BDF;&#x8005;&#x4E86;&#x3002;</p>
+<p>KVO&#x5176;&#x5B9E;&#x4E5F;&#x662F;&#x201C;&#x89C2;&#x5BDF;&#x8005;&#x201D;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x7684;&#x4E00;&#x79CD;&#x5E94;&#x7528;&#x3002;</p>
+<h4 id="&#x6CE8;&#x518C;&#x89C2;&#x5BDF;&#x8005;"><a href="#&#x6CE8;&#x518C;&#x89C2;&#x5BDF;&#x8005;" class="headerlink" title="&#x6CE8;&#x518C;&#x89C2;&#x5BDF;&#x8005;"></a>&#x6CE8;&#x518C;&#x89C2;&#x5BDF;&#x8005;</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">- (void)viewDidLoad {</span><br><span class="line">    [super viewDidLoad];</span><br><span class="line">   </span><br><span class="line">    self.person = [[Person alloc]init];</span><br><span class="line">    self.person.name = @<span class="string">&quot;&#x74DC;&#x5A03;&#x5B50;&quot;</span>;</span><br><span class="line">    NSLog(@<span class="string">&quot;&#x51FA;&#x53D1;&#x524D;name&#x7684;&#x503C;&#xFF1A;%@&quot;</span>,self.person.name);</span><br><span class="line">    </span><br><span class="line">    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];</span><br><span class="line">    </span><br><span class="line">    [btn addTarget:self action:@selector(Btn) <span class="keyword">for</span>ControlEvents:(UIControlEventTouchUpInside)];</span><br><span class="line">    </span><br><span class="line">    btn.backgroundColor = [UIColor redColor];</span><br><span class="line">    [btn <span class="built_in">set</span>Title:@<span class="string">&quot;&#x6539;&#x53D8;name&#x7684;&#x503C;&quot;</span> <span class="keyword">for</span>State:(UIControlStateNormal)];</span><br><span class="line">    btn.frame = CGRectMake(100, 100, 100, 20);</span><br><span class="line">    [self.view addSubview:btn];</span><br><span class="line">    </span><br><span class="line">//  1  &#x6CE8;&#x518C;&#x89C2;&#x5BDF;&#x8005;</span><br><span class="line">  </span><br><span class="line">     self.person&#x88AB;&#x89C2;&#x5BDF;&#x7684;&#x5BF9;&#x8C61;</span><br><span class="line">     addObserver:&#x89C2;&#x5BDF;&#x5BF9;&#x8C61;</span><br><span class="line">     <span class="keyword">for</span>KeyPath:&#x5B57;&#x7B26;&#x6807;&#x8BC6;&#x7684;key&#xFF08;&#x8981;&#x89C2;&#x5BDF;&#x5185;&#x5BB9;&#xFF09;</span><br><span class="line">     options:&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x53BB;&#x89E6;&#x53D1;&#x6DFB;&#x52A0;&#x89C2;&#x5BDF;&#x8005;&#x5BF9;&#x8C61;</span><br><span class="line">    1 NSKeyValueObservingOptionNew &#x628A;&#x66F4;&#x6539;&#x4E4B;&#x524D;&#x7684;&#x503C;&#x63D0;&#x4F9B;&#x7ED9;&#x5904;&#x7406;&#x65B9;&#x6CD5;</span><br><span class="line">    2 NSKeyValueObservingOptionOld &#x628A;&#x66F4;&#x6539;&#x4E4B;&#x540E;&#x7684;&#x503C;&#x63D0;&#x4F9B;&#x7ED9;&#x5904;&#x7406;&#x65B9;&#x6CD5;</span><br><span class="line">    3 NSKeyValueObservingOptionInitial &#x628A;&#x521D;&#x59CB;&#x5316;&#x63D0;&#x4F9B;&#x7ED9;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF0C;&#x4E00;&#x65E6;&#x6CE8;&#x518C;&#xFF0C;&#x5C31;&#x7ACB;&#x9A6C;&#x8C03;&#x7528;&#x4E00;&#x6B21;</span><br><span class="line">    4 NSKeyValueObservingOptionPrior &#x5206;&#x4E24;&#x6B21;&#x8C03;&#x7528;&#xFF0C;&#x503C;&#x6539;&#x53D8;&#x4E4B;&#x524D;&#x548C;&#x6539;&#x53D8;&#x4E4B;&#x540E;</span><br><span class="line">     context:&#x5404;&#x79CD;&#x7C7B;&#x578B;&#x6570;&#x636E;&#xFF0C;&#x4E00;&#x822C;&#x4E3A;nil</span><br><span class="line"> </span><br><span class="line">    [self.person addObserver:self <span class="keyword">for</span>KeyPath:@<span class="string">&quot;name&quot;</span> options:(NSKeyValueObservingOptionNew) context:nil];</span><br><span class="line">   </span><br><span class="line">}</span><br><span class="line">``` </span><br><span class="line"><span class="comment">#### 2 &#x89E6;&#x53D1;</span></span><br><span class="line">``` bash</span><br><span class="line">//object&#xFF1A;&#x88AB;&#x89C2;&#x5BDF;&#x8005;&#x7684;&#x5C5E;&#x6027;&#x6240;&#x5C5E;&#x7684;&#x5BF9;&#x8C61;</span><br><span class="line">//change&#xFF1A;&#x6CE8;&#x518C;&#x89C2;&#x5BDF;&#x8005;&#x65F6;&#xFF0C;option&#x7684;&#x53C2;&#x6570;&#x63D0;&#x4F9B;&#x7684;&#x6570;&#x636E;&#xFF0C;&#xFF08;&#x6B64;&#x5904;&#x63D0;&#x4F9B;&#x662F;&#x5C5E;&#x6027;&#x6539;&#x53D8;&#x94B1;&#x7684;&#x503C;&#xFF09;</span><br><span class="line"></span><br><span class="line">-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary&lt;NSString *,id&gt; *)change context:(void *)context{</span><br><span class="line">    self.view.backgroundColor = [UIColor purpleColor];</span><br></pre></td></tr></table></figure>
+<h4 id="3-&#x79FB;&#x9664;&#x89C2;&#x5BDF;&#x8005;&#xFF08;&#x4ECE;&#x88AB;&#x89C2;&#x5BDF;&#x8005;&#x5BF9;&#x8C61;&#x79FB;&#x9664;&#x89C2;&#x5BDF;&#x8005;&#xFF09;"><a href="#3-&#x79FB;&#x9664;&#x89C2;&#x5BDF;&#x8005;&#xFF08;&#x4ECE;&#x88AB;&#x89C2;&#x5BDF;&#x8005;&#x5BF9;&#x8C61;&#x79FB;&#x9664;&#x89C2;&#x5BDF;&#x8005;&#xFF09;" class="headerlink" title="3 &#x79FB;&#x9664;&#x89C2;&#x5BDF;&#x8005;&#xFF08;&#x4ECE;&#x88AB;&#x89C2;&#x5BDF;&#x8005;&#x5BF9;&#x8C61;&#x79FB;&#x9664;&#x89C2;&#x5BDF;&#x8005;&#xFF09;"></a>3 &#x79FB;&#x9664;&#x89C2;&#x5BDF;&#x8005;&#xFF08;&#x4ECE;&#x88AB;&#x89C2;&#x5BDF;&#x8005;&#x5BF9;&#x8C61;&#x79FB;&#x9664;&#x89C2;&#x5BDF;&#x8005;&#xFF09;</h4><pre><code class="bash">-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary&lt;NSString *,id&gt; *)change context:(void *)context{
+    self.view.backgroundColor = [UIColor purpleColor];
+
+    [self.person removeObserver:self <span class="keyword">for</span>KeyPath:@<span class="string">&quot;name&quot;</span>];
+
+    NSLog(@<span class="string">&quot;&#x6539;&#x53D8;&#x540E;name&#x7684;&#x503C;:%@&quot;</span>,self.person.name);
+
+}
+-(void)Btn{
+    self.person.name = @<span class="string">&quot;&#x4E8C;&#x72D7;&#x5B50;&quot;</span>;
+}
+</code></pre>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/07/01/JSON解析/">JSON解析</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-07-01T12:02:56.000Z" itemprop="datePublished">
-          2016-07-01
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1.JSONJSON(JavaScript Object Notation),&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x683C;&#x5F0F;,&#x662F;&#x57FA;&#x4E8E;JS&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x96C6;,&#x662F;&#x5B8C;&#x5168;&#x91C7;&
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/07/01/JSON解析/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/07/01/XML之DOM解析/">XML之DOM解析</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-07-01T11:45:58.000Z" itemprop="datePublished">
-          2016-07-01
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        DOM&#x89E3;&#x6790;1 &#x4ECB;&#x7ECD;Document Object Model&#xFF08;&#x6587;&#x6863;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#xFF09;&#xFF0C;&#x5C06;&#x6574;&#x4E2A;XML&#x6587;&#x6863;&#x8BFB;&#x5165;&#xFF0C;&#x6784;&#x5EFA;&#x9A7B
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/07/01/XML之DOM解析/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/07/01/XML之SAX解析/">XML之SAX解析</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-07-01T11:27:38.000Z" itemprop="datePublished">
-          2016-07-01
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        &#x89E3;&#x6790;&#x662F;&#x4EC0;&#x4E48;?&#x4ECE;&#x4E8B;&#x5148;&#x89C4;&#x5B9A;&#x7684;&#x683C;&#x5F0F;&#x4E2D;&#x63D0;&#x53D6;&#x6570;&#x636E;&#x89E3;&#x6790;&#x524D;&#x63D0;:1.&#x63D0;&#x524D;&#x7EA6;&#x5B9A;&#x597D;
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/07/01/XML之SAX解析/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/06/30/qq列表/">qq列表</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-06-30T12:37:26.000Z" itemprop="datePublished">
-          2016-06-30
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        &#x53EF;&#x6536;&#x7F29;&#x5206;&#x7EC4;&#x8868;&#x683C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x8BFE;&#x6536;&#x7F29;&#x7684;&#x7684;&#x5206;&#x7EC4;&#x8868;&#x683C;&#xFF0C;&#x70B9;&#x51FB;&#x5176;&#x4
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/06/30/qq列表/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/06/29/CoreData/">CoreData</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-06-29T11:04:51.000Z" itemprop="datePublished">
-          2016-06-29
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        CoreData&#x6982;&#x5FF5;&#xFF1A;  1&#x3001;&#x662F;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5316;&#x6846;&#x67B6;&#xFF0C;&#x7528;&#x6765;&#x89E3;&#x51B3;&#x5BF9;&#x8C61;&#x751F;&#x547D;&#x5468;&#x671F;&#x7BA1;&
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/06/29/CoreData/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/06/28/SQLite/">SQLite</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-06-28T12:03:07.000Z" itemprop="datePublished">
-          2016-06-28
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        SQLite&#x7B80;&#x5355;&#x4ECB;&#x7ECD;1.ios&#x4E2D;&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#xFF08;1&#xFF09;Plist&#xFF08;NSArray\NSDictionary&#xFF09;
-&#xFF08;2&#xFF09;Preference&#xFF08;&#x504F;&#x597D;&#x
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/06/28/SQLite/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
         <nav class="pagination" role="pagination">
-          
-          
-        </nav>
+    
+    
+    <a class="pull-right" href="/2016/07/04/网络请求/">
+        网络请求 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/07/06/KVO/" data-title="KVO" data-url="http://yoursite.com/2016/07/06/KVO/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
-        </div>
-    </div>
-</section>
-<!-- ============================ END Content =========================== -->
+
 
       
 <!-- ============================ Footer =========================== -->
